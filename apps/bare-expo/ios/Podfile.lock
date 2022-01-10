@@ -85,15 +85,13 @@ PODS:
     - GoogleSignIn (~> 5.0.2)
   - EXImage (0.2.0):
     - React-Core
-    - SDWebImage (~> 5.0)
+    - SDWebImage (~> 5.12.2)
     - SDWebImageSVGKitPlugin (~> 1.3)
     - SDWebImageWebPCoder (~> 0.8.4)
     - SVGKit (~> 2.1)
   - EXImageLoader (3.1.0):
     - ExpoModulesCore
     - React-Core
-  - EXImagePicker (12.0.0):
-    - ExpoModulesCore
   - EXInAppPurchases (12.1.0):
     - ExpoModulesCore
   - EXJSONUtils (0.2.0)
@@ -117,27 +115,27 @@ PODS:
     - ExpoModulesCore
   - Expo (44.0.0-beta.1):
     - ExpoModulesCore
-  - expo-dev-client (0.8.0):
+  - expo-dev-client (0.8.1):
     - EXManifests
     - expo-dev-launcher
     - expo-dev-menu
     - expo-dev-menu-interface
     - EXUpdatesInterface
-  - expo-dev-launcher (0.10.0):
+  - expo-dev-launcher (0.10.1):
     - EXManifests
-    - expo-dev-launcher/Main (= 0.10.0)
+    - expo-dev-launcher/Main (= 0.10.1)
     - expo-dev-menu
     - expo-dev-menu-interface
     - EXUpdatesInterface
     - React-Core
-  - expo-dev-launcher/Main (0.10.0):
+  - expo-dev-launcher/Main (0.10.1):
     - EXManifests
     - expo-dev-launcher/Unsafe
     - expo-dev-menu
     - expo-dev-menu-interface
     - EXUpdatesInterface
     - React-Core
-  - expo-dev-launcher/Tests (0.10.0):
+  - expo-dev-launcher/Tests (0.10.1):
     - EXManifests
     - expo-dev-menu
     - expo-dev-menu-interface
@@ -149,24 +147,24 @@ PODS:
     - React-Core
     - React-CoreModules
     - React-hermes
-  - expo-dev-launcher/Unsafe (0.10.0):
+  - expo-dev-launcher/Unsafe (0.10.1):
     - EXManifests
     - expo-dev-menu
     - expo-dev-menu-interface
     - EXUpdatesInterface
     - React-Core
-  - expo-dev-menu (0.9.0):
-    - expo-dev-menu/Main (= 0.9.0)
-  - expo-dev-menu-interface (0.5.0)
-  - expo-dev-menu-interface/Tests (0.5.0):
+  - expo-dev-menu (0.9.1):
+    - expo-dev-menu/Main (= 0.9.1)
+  - expo-dev-menu-interface (0.5.1)
+  - expo-dev-menu-interface/Tests (0.5.1):
     - Nimble
     - Quick
-  - expo-dev-menu/GestureHandler (0.9.0)
-  - expo-dev-menu/Main (0.9.0):
+  - expo-dev-menu/GestureHandler (0.9.1)
+  - expo-dev-menu/Main (0.9.1):
     - expo-dev-menu-interface
     - expo-dev-menu/Vendored
     - React-Core
-  - expo-dev-menu/Reanimated (0.9.0):
+  - expo-dev-menu/Reanimated (0.9.1):
     - DoubleConversion
     - FBLazyVector
     - FBReactNativeSpec
@@ -194,19 +192,19 @@ PODS:
     - React-RCTVibration
     - ReactCommon/turbomodule/core
     - Yoga
-  - expo-dev-menu/SafeAreaView (0.9.0)
-  - expo-dev-menu/Tests (0.9.0):
+  - expo-dev-menu/SafeAreaView (0.9.1)
+  - expo-dev-menu/Tests (0.9.1):
     - hermes-engine
     - Nimble
     - Quick
     - React-CoreModules
     - React-hermes
-  - expo-dev-menu/UITests (0.9.0):
+  - expo-dev-menu/UITests (0.9.1):
     - hermes-engine
     - React
     - React-CoreModules
     - React-hermes
-  - expo-dev-menu/Vendored (0.9.0):
+  - expo-dev-menu/Vendored (0.9.1):
     - expo-dev-menu/GestureHandler
     - expo-dev-menu/Reanimated
     - expo-dev-menu/SafeAreaView
@@ -216,6 +214,8 @@ PODS:
     - ExpoModulesCore
   - ExpoImageManipulator (10.2.0):
     - EXImageLoader
+    - ExpoModulesCore
+  - ExpoImagePicker (12.0.0):
     - ExpoModulesCore
   - ExpoKeepAwake (10.0.1):
     - ExpoModulesCore
@@ -818,7 +818,6 @@ DEPENDENCIES:
   - EXGoogleSignIn (from `../../../packages/expo-google-sign-in/ios`)
   - EXImage (from `../../../packages/expo-image`)
   - EXImageLoader (from `../../../packages/expo-image-loader/ios`)
-  - EXImagePicker (from `../../../packages/expo-image-picker/ios`)
   - EXInAppPurchases (from `../../../packages/expo-in-app-purchases/ios`)
   - EXJSONUtils (from `../../../packages/expo-json-utils/ios`)
   - EXLocalAuthentication (from `../../../packages/expo-local-authentication/ios`)
@@ -841,6 +840,7 @@ DEPENDENCIES:
   - ExpoCellular (from `../../../packages/expo-cellular/ios`)
   - ExpoHaptics (from `../../../packages/expo-haptics/ios`)
   - ExpoImageManipulator (from `../../../packages/expo-image-manipulator/ios`)
+  - ExpoImagePicker (from `../../../packages/expo-image-picker/ios`)
   - ExpoKeepAwake (from `../../../packages/expo-keep-awake/ios`)
   - ExpoLinearGradient (from `../../../packages/expo-linear-gradient/ios`)
   - ExpoLocalization (from `../../../packages/expo-localization/ios`)
@@ -1050,9 +1050,6 @@ EXTERNAL SOURCES:
   EXImageLoader:
     inhibit_warnings: false
     :path: "../../../packages/expo-image-loader/ios"
-  EXImagePicker:
-    inhibit_warnings: false
-    :path: "../../../packages/expo-image-picker/ios"
   EXInAppPurchases:
     inhibit_warnings: false
     :path: "../../../packages/expo-in-app-purchases/ios"
@@ -1106,6 +1103,9 @@ EXTERNAL SOURCES:
   ExpoImageManipulator:
     inhibit_warnings: false
     :path: "../../../packages/expo-image-manipulator/ios"
+  ExpoImagePicker:
+    inhibit_warnings: false
+    :path: "../../../packages/expo-image-picker/ios"
   ExpoKeepAwake:
     inhibit_warnings: false
     :path: "../../../packages/expo-keep-awake/ios"
@@ -1315,9 +1315,8 @@ SPEC CHECKSUMS:
   EXGL: 95631064ed19b9fc8dfbedcc71c205961ae3c954
   EXGL_CPP: 835a91b5a8aecb79f4f819ce57def685e90b81a2
   EXGoogleSignIn: be1c4d935ea46d0d6495b1ce51bc37c98a64c07a
-  EXImage: ee032fea95d6a21800d6678eb14d1face73236d6
+  EXImage: a19c0dbf296779aeb667f691190c9bc6f2a3bf0e
   EXImageLoader: 9539bfc5ad0fc36abf78c82c096f701b43e994d7
-  EXImagePicker: f17d99eb5344d0d1bcfc2f37fb57fb6517ca5567
   EXInAppPurchases: 9c65b5ed6313e3aa32a5b75e4bcbce19868d66b4
   EXJSONUtils: f515cf71710855d7ba5bfc6752af3b9a6f6aad01
   EXLocalAuthentication: 4c7166ed3133d2c75586093833936652e7d2c7fc
@@ -1329,13 +1328,14 @@ SPEC CHECKSUMS:
   EXNotifications: 2845e7f95660bc68ce113d78e9fa6cfb46cb0349
   EXPermissions: f4c65fa770489cbf16ea17c3013a670671525014
   Expo: dcd13c848d84cf058c81b1a4289ac3a7891f61b4
-  expo-dev-client: c0116deee06925cb80157dc1773c8e9e2cc8a3e2
-  expo-dev-launcher: 506cd66f30735eb4212d9700dccaa0f6f3fd7ba1
-  expo-dev-menu: 072c7b146f89a6e95a6d1cd4af856eb0b37593b2
-  expo-dev-menu-interface: 8562bfafa19d01531694ab492fc93f598f8c8d7b
+  expo-dev-client: 5fa2ce8b3e186d1734bc746e505e9e66c39cac1f
+  expo-dev-launcher: 859ff87239fde76a2014c0a1d21d7d8bcbc6c840
+  expo-dev-menu: 96c0a87ce8c2c522e17616285d5ec6a6aa7241f4
+  expo-dev-menu-interface: 5f95926b52150b1e5fe7d6815675c7a61245de35
   ExpoCellular: f800f765c3dd91205a2b84cd4e3ea132c397cffe
   ExpoHaptics: c62a5fc7bba0184d0165d559fc2b0fc46168ef40
   ExpoImageManipulator: 05558f43cbfa3525d6a56fc71c8f54b2ca388ea3
+  ExpoImagePicker: fcb2c6ef0267c2ec4274d9b7eea61063fa2433f3
   ExpoKeepAwake: b063bab565e7640124e37d1700831c4b723a7bc7
   ExpoLinearGradient: a7f1672e1727fedc4280d56c27606f8e195b9fcc
   ExpoLocalization: 83582a967db52987a8479490b056d5eb9fd70552
